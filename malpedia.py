@@ -16,7 +16,7 @@ YARA_DIR = os.path.join(ROOT_DIR, "yara_rules")
 class myDB:
     NO_DESC = "There is no description at this point."
     def __init__(self):
-        self.engine = create_engine('mysql+pymysql://root:dldnwo1004@10.250.252.103/hacking_url_c2?charset=utf8', convert_unicode=True, echo=True)
+        self.engine = create_engine('mysql+pymysql://root:password@10.250.252.103/hacking_url_c2?charset=utf8', convert_unicode=True, echo=True)
         self.session = scoped_session(sessionmaker(autocommit=False, autoflush=False, bind=self.engine))
 
     def insert_mc_desc(self, _obj):

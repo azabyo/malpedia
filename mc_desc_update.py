@@ -7,7 +7,7 @@ MINER=228
 with open("mc_desc_update.txt", "r") as f:
     av_list = f.readlines()
 
-engine = create_engine('mysql+pymysql://root:dldnwo1004@10.250.252.103/hacking_url_c2?charset=utf8', convert_unicode=True, echo=True)
+engine = create_engine('mysql+pymysql://root:password@10.250.252.103/hacking_url_c2?charset=utf8', convert_unicode=True, echo=True)
 session = scoped_session(sessionmaker(autocommit=False, autoflush=False, bind=engine))
 
 for av in av_list:
